@@ -19,6 +19,149 @@
         "body": "Helvetica Now Display（→代替: Satoshi）"
       },
       "date": "2026-02-28"
+    },
+    {
+      "id": "02",
+      "name": "Topology Precision",
+      "url": "https://www.topology.vc/",
+      "screenshot": "screenshots/02-topology-precision.jpg",
+      "mood": "静かな威厳と技術的信頼感が共存するダークVC",
+      "tags": ["dark-theme", "minimal", "uppercase-nav", "tech-vc", "monospace-accent", "border-detail"],
+      "colors": {
+        "primary": "#151515",
+        "secondary": "#E4E2D8",
+        "accent": "#A7B4BA",
+        "background": "#151515",
+        "text_on_primary": "#E4E2D8"
+      },
+      "fonts": {
+        "display": "LazareGrotesk（→代替: Space Grotesk）",
+        "body": "Space Mono（→代替: Space Mono）"
+      },
+      "date": "2026-02-28"
+    },
+    {
+      "id": "03",
+      "name": "Antonsson Noir",
+      "url": "https://www.andreasantonsson.dev/",
+      "screenshot": "screenshots/03-antonsson-noir.jpg",
+      "mood": "漆黒の中に浮かぶミニマルなクラフト感",
+      "tags": ["pure-black", "portfolio", "minimal", "full-screen-sections", "serif-display", "creative-dev"],
+      "colors": {
+        "primary": "#000000",
+        "secondary": "#FFFFFF",
+        "accent": "#FFFFFF",
+        "background": "#000000",
+        "text_on_primary": "#FFFFFF"
+      },
+      "fonts": {
+        "display": "Dahlia（→代替: Playfair Display）",
+        "body": "Inter（→代替: Inter）"
+      },
+      "date": "2026-02-28"
+    },
+    {
+      "id": "04",
+      "name": "Gander Warmth",
+      "url": "https://takeagander.com/",
+      "screenshot": "screenshots/04-gander-warmth.jpg",
+      "mood": "温もりのあるクリーム地にインクのような手触り感",
+      "tags": ["warm-cream", "editorial", "custom-serif", "dashed-border", "organic", "studio"],
+      "colors": {
+        "primary": "#171717",
+        "secondary": "#FFF4ED",
+        "accent": "#FFC29B",
+        "background": "#FFF4ED",
+        "text_on_primary": "#FFF4ED"
+      },
+      "fonts": {
+        "display": "Denim INK Regular（→代替: Crimson Pro）",
+        "body": "Denim INK SemiBold（→代替: Source Serif 4）"
+      },
+      "date": "2026-02-28"
+    },
+    {
+      "id": "05",
+      "name": "Planetono Carnival",
+      "url": "https://www.planetono.space/",
+      "screenshot": "screenshots/05-planetono-carnival.jpg",
+      "mood": "赤とイエローが弾けるポップ＆コスミック遊園地",
+      "tags": ["bold-red", "playful", "space-theme", "swiper", "yellow-accent", "round-buttons"],
+      "colors": {
+        "primary": "#EB3322",
+        "secondary": "#F7F2E5",
+        "accent": "#FFC737",
+        "background": "#EB3322",
+        "text_on_primary": "#F7F2E5"
+      },
+      "fonts": {
+        "display": "Futura Passata（→代替: Unbounded）",
+        "body": "Poppins（→代替: Poppins）"
+      },
+      "date": "2026-02-28"
+    },
+    {
+      "id": "06",
+      "name": "Sileent Monochrome",
+      "url": "https://www.sileent.com/",
+      "screenshot": "screenshots/06-sileent-monochrome.jpg",
+      "mood": "静寂のなかに潜む洗練された白黒コントラスト",
+      "tags": ["monochrome", "ai-studio", "pill-buttons", "clean", "neue-montreal", "rounded-cta"],
+      "colors": {
+        "primary": "#1A1A1A",
+        "secondary": "#FFFFFF",
+        "accent": "#64748B",
+        "background": "#FFFFFF",
+        "text_on_primary": "#FFFFFF"
+      },
+      "fonts": {
+        "display": "PP Neue Montreal（→代替: DM Sans）",
+        "body": "PP Neue Montreal（→代替: DM Sans）"
+      },
+      "date": "2026-02-28",
+      "note": "アクセス時に500エラーが表示される場合あり。分析はエラー前の部分ロードから取得。"
+    },
+    {
+      "id": "07",
+      "name": "Good Fella Craft",
+      "url": "https://good-fella.com/",
+      "screenshot": "screenshots/07-good-fella-craft.jpg",
+      "mood": "職人気質のダークトーンにオレンジが差すクラフト系スタジオ",
+      "tags": ["dark-craft", "orange-accent", "nav-reference", "grid-system", "tight-tracking", "section-label"],
+      "colors": {
+        "primary": "#141314",
+        "secondary": "#EEEEEE",
+        "accent": "#FD551D",
+        "background": "#141314",
+        "text_on_primary": "#EEEEEE"
+      },
+      "fonts": {
+        "display": "Aktiv Grotesk（→代替: Space Grotesk）",
+        "body": "Geist Mono（→代替: JetBrains Mono）"
+      },
+      "date": "2026-02-28",
+      "note": "ナビゲーションバーが参考。固定ヘッダー、大きなフルスクリーンメニュー、uppercase CTA、ハンバーガー開閉アニメーション。"
+    },
+    {
+      "id": "08",
+      "name": "Foundrline Signal",
+      "url": "https://www.foundrline.com/",
+      "screenshot": "screenshots/08-foundrline-signal.jpg",
+      "mood": "スタートアップの緊張感とクリアなシグナルを発するCTA設計",
+      "tags": ["cta-reference", "startup", "mono-font", "dark-hero", "warm-body", "sprint-based"],
+      "colors": {
+        "primary": "#030406",
+        "secondary": "#EFEEEC",
+        "accent": "#FF6600",
+        "background": "#EFEEEC",
+        "text_on_primary": "#FFFFFF"
+      },
+      "fonts": {
+        "display": "Saans TRIAL Medium（→代替: General Sans）",
+        "body": "Chivo Mono（→代替: Chivo Mono）"
+      },
+      "date": "2026-02-28",
+      "note": "CTAが参考。ボタンは5px角丸、20px 24pxパディング、ダーク背景に白テキスト。フォームSubmitも同スタイル。"
     }
   ]
 }

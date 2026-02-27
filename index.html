@@ -198,6 +198,16 @@
     color: var(--text-dim);
   }
 
+  /* note */
+  .card-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    padding: 8px 10px;
+    border-left: 2px solid #333;
+    line-height: 1.5;
+  }
+
   /* link */
   .card-link {
     display: inline-flex;
@@ -284,6 +294,7 @@
         <span>Display:</span> ${s.fonts.display}<br>
         <span>Body:</span> ${s.fonts.body}
       </div>
+      ${s.note ? `<div class="card-note">${s.note}</div>` : ''}
       <a class="card-link" href="${s.url}" target="_blank" rel="noopener">
         ${new URL(s.url).hostname}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
