@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Style Library</title>
+<meta name="description" content="Webデザインリファレンスのビジュアルカタログ。配色・タイポグラフィ・スタイルを一覧で比較。">
+<meta property="og:title" content="Design Style Library">
+<meta property="og:description" content="Webデザインリファレンスのビジュアルカタログ">
+<meta property="og:image" content="https://paul13131313.github.io/design-style-catalog/ogp.png">
+<meta property="og:url" content="https://paul13131313.github.io/design-style-catalog/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design Style Library">
+<meta name="twitter:description" content="Webデザインリファレンスのビジュアルカタログ">
+<meta name="twitter:image" content="https://paul13131313.github.io/design-style-catalog/ogp.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,300&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+  :root {
+    --bg: #0A0A0A;
+    --surface: #141414;
+    --border: #222;
+    --text: #E8E8E8;
+    --text-dim: #777;
+    --text-muted: #555;
+    --accent: #C8FF00;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .site-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .site-header .count {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Grid ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--surface);
+    padding: 28px;
+    transition: background 0.3s ease;
+    cursor: default;
+    position: relative;
+  }
+  .card:hover {
+    background: #1a1a1a;
+  }
+  .card:hover .card-img img {
+    transform: scale(1.015);
+  }
+
+  /* number */
+  .card-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
+  /* screenshot */
+  .card-img {
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #000;
+    margin-bottom: 20px;
+  }
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* name */
+  .card-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+
+  /* mood */
+  .card-mood {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+
+  /* colors */
+  .card-colors {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  .swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .swatch[title]::after {
+    content: attr(title);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Space Grotesk', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    background: #1a1a1a;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .swatch:hover::after {
+    opacity: 1;
+  }
+
+  /* tags */
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .card:hover .tag {
+    border-color: #333;
+    color: var(--text);
+  }
+
+  /* fonts info */
+  .card-fonts {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .card-fonts span {
+    color: var(--text-dim);
+  }
+
+  /* link */
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .card-link:hover {
+    color: var(--text);
+  }
+  .card-link svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* date */
+  .card-date {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .site-header {
+      padding: 32px 20px 24px;
+    }
+    .card {
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Design Style Library</h1>
+  <p class="count" id="count"></p>
+</header>
+
+<main class="grid" id="grid"></main>
+
+<script>
+(async () => {
+  const res = await fetch('./styles.json');
+  const { styles } = await res.json();
+
+  document.getElementById('count').textContent = `${styles.length} style${styles.length !== 1 ? 's' : ''} collected`;
+
+  const grid = document.getElementById('grid');
+
+  styles.forEach(s => {
+    const colors = Object.entries(s.colors);
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.innerHTML = `
+      <span class="card-date">${s.date}</span>
+      <div class="card-num">#${s.id}</div>
+      <div class="card-img">
+        <img src="${s.screenshot}" alt="${s.name}" loading="lazy">
+      </div>
+      <h2 class="card-name">${s.name}</h2>
+      <p class="card-mood">${s.mood}</p>
+      <div class="card-colors">
+        ${colors.map(([k, v]) => `<div class="swatch" style="background:${v}" title="${k}: ${v}"></div>`).join('')}
+      </div>
+      <div class="card-tags">
+        ${s.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+      </div>
+      <div class="card-fonts">
+        <span>Display:</span> ${s.fonts.display}<br>
+        <span>Body:</span> ${s.fonts.body}
+      </div>
+      <a class="card-link" href="${s.url}" target="_blank" rel="noopener">
+        ${new URL(s.url).hostname}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    `;
+    grid.appendChild(card);
+  });
+})();
+</script>
+
+</body>
+</html>

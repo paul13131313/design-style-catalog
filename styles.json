@@ -1,0 +1,24 @@
+{
+  "styles": [
+    {
+      "id": "01",
+      "name": "Locomotive Bold",
+      "url": "https://scroll.locomotive.ca/",
+      "screenshot": "screenshots/01-locomotive-bold.jpg",
+      "mood": "大胆で自信に満ちたテクニカル・クリエイティブ",
+      "tags": ["bold", "blue-dominant", "two-tone", "tech-creative", "scroll-driven"],
+      "colors": {
+        "primary": "#202DED",
+        "secondary": "#000000",
+        "accent": "#FF6B5B",
+        "background": "#FFFFFF",
+        "text_on_primary": "#FFFFFF"
+      },
+      "fonts": {
+        "display": "PP Locomotive New（→代替: Playfair Display）",
+        "body": "Helvetica Now Display（→代替: Satoshi）"
+      },
+      "date": "2026-02-28"
+    }
+  ]
+}
