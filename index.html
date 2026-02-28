@@ -240,6 +240,42 @@
     letter-spacing: 0.05em;
   }
 
+  /* copy button */
+  .card-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 5px 14px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    margin-left: 12px;
+  }
+  .card-copy:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .card-copy.copied {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(200, 255, 0, 0.08);
+  }
+  .card-copy svg {
+    width: 13px;
+    height: 13px;
+  }
+  .card-bottom {
+    display: flex;
+    align-items: center;
+  }
+
   /* ── Responsive ── */
   @media (max-width: 900px) {
     .grid {
@@ -295,12 +331,66 @@
         <span>Body:</span> ${s.fonts.body}
       </div>
       ${s.note ? `<div class="card-note">${s.note}</div>` : ''}
-      <a class="card-link" href="${s.url}" target="_blank" rel="noopener">
-        ${new URL(s.url).hostname}
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-      </a>
+      <div class="card-bottom">
+        <a class="card-link" href="${s.url}" target="_blank" rel="noopener">
+          ${new URL(s.url).hostname}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+        <button class="card-copy" data-id="${s.id}" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy Style
+        </button>
+      </div>
     `;
     grid.appendChild(card);
+  });
+
+  // Copy style handler
+  function buildStyleText(s) {
+    // HEXカラーだけフィルタ（"なし"等を除外）
+    const colorLines = Object.entries(s.colors)
+      .filter(([k, v]) => typeof v === 'string' && v.startsWith('#'))
+      .map(([k, v]) => `  ${k}: ${v}`)
+      .join('\n');
+    const specialColor = s.colors.special ? `  special: ${s.colors.special}` : '';
+
+    let text = `## Design Style: ${s.name}
+ref: ${s.url}
+mood: ${s.mood}
+
+colors:
+${colorLines}${specialColor ? '\n' + specialColor : ''}
+
+fonts:
+  display: ${s.fonts.display}
+  body: ${s.fonts.body}
+
+tags: ${s.tags.join(', ')}`;
+
+    if (s.note) {
+      text += `\n\nnote: ${s.note}`;
+    }
+
+    return text;
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.card-copy');
+    if (!btn) return;
+    const id = btn.dataset.id;
+    const style = styles.find(s => s.id === id);
+    if (!style) return;
+
+    const text = buildStyleText(style);
+    navigator.clipboard.writeText(text).then(() => {
+      btn.classList.add('copied');
+      const origHTML = btn.innerHTML;
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Copied!`;
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = origHTML;
+      }, 1500);
+    });
   });
 })();
 </script>
