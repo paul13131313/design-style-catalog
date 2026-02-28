@@ -22,23 +22,25 @@
     },
     {
       "id": "02",
-      "name": "Topology Precision",
+      "name": "Topology Prism",
       "url": "https://www.topology.vc/",
-      "screenshot": "screenshots/02-topology-precision.jpg",
-      "mood": "静かな威厳と技術的信頼感が共存するダークVC",
-      "tags": ["dark-theme", "minimal", "uppercase-nav", "tech-vc", "monospace-accent", "border-detail"],
+      "screenshot": "screenshots/02-topology-prism.jpg",
+      "mood": "プリズムの光を帯びた3Dトポロジーが静かな威厳を放つVC",
+      "tags": ["webgl", "3d-art", "prism-rainbow", "dark-theme", "monospace-accent", "frontier-tech", "scroll-driven"],
       "colors": {
-        "primary": "#151515",
-        "secondary": "#E4E2D8",
-        "accent": "#A7B4BA",
-        "background": "#151515",
-        "text_on_primary": "#E4E2D8"
+        "primary": "#FFFFFF",
+        "secondary": "#1A1A1A",
+        "accent": "#C8A0FF",
+        "background": "#0A0A0A",
+        "text_on_primary": "#0A0A0A",
+        "special": "3Dアートのプリズム虹色（ピンク・水色・黄・緑・オレンジ・薄紫）がアクセントカラーの役割"
       },
       "fonts": {
-        "display": "LazareGrotesk（→代替: Space Grotesk）",
-        "body": "Space Mono（→代替: Space Mono）"
+        "display": "カスタムセリフ体（→代替: Instrument Serif / Cormorant Garamond）",
+        "body": "モノスペース系（→代替: Space Mono / IBM Plex Mono）"
       },
-      "date": "2026-02-28"
+      "date": "2026-02-28",
+      "note": "WebGL/Three.js必須。Playwrightではレンダリング不可。静的再現時はグラデーションメッシュ背景+プリズム虹色でニュアンスを出す。フッターの角丸ボックス＋四隅マーク「┌┐└┘」が独特のディテール。"
     },
     {
       "id": "03",
@@ -102,24 +104,25 @@
     },
     {
       "id": "06",
-      "name": "Sileent Monochrome",
+      "name": "Sileent Cinema",
       "url": "https://www.sileent.com/",
-      "screenshot": "screenshots/06-sileent-monochrome.jpg",
-      "mood": "静寂のなかに潜む洗練された白黒コントラスト",
-      "tags": ["monochrome", "ai-studio", "pill-buttons", "clean", "neue-montreal", "rounded-cta"],
+      "screenshot": "screenshots/06-sileent-cinema.jpg",
+      "mood": "映像の力だけで語る、一切の装飾を排したシネマティック・ポートフォリオ",
+      "tags": ["video-portfolio", "monochrome", "full-bleed-video", "frosted-glass", "numbered-projects", "cinema", "ai-studio", "minimal-ui"],
       "colors": {
-        "primary": "#1A1A1A",
-        "secondary": "#FFFFFF",
-        "accent": "#64748B",
-        "background": "#FFFFFF",
-        "text_on_primary": "#FFFFFF"
+        "primary": "#FFFFFF",
+        "secondary": "#000000",
+        "accent": "なし（映像そのものがビジュアル）",
+        "background": "#000000",
+        "text_on_primary": "#000000",
+        "special": "全コンテンツがB&Wモノクロ映像。色は一切使わない"
       },
       "fonts": {
-        "display": "PP Neue Montreal（→代替: DM Sans）",
-        "body": "PP Neue Montreal（→代替: DM Sans）"
+        "display": "PP Neue Montreal（→代替: DM Sans / General Sans）",
+        "body": "PP Neue Montreal（→代替: DM Sans / General Sans）"
       },
       "date": "2026-02-28",
-      "note": "アクセス時に500エラーが表示される場合あり。分析はエラー前の部分ロードから取得。"
+      "note": "映像ポートフォリオの参考。フルスクリーンB&W映像＋最小限UIの構成。フロストガラスのボトムバー、プロジェクト番号カウンター、Grid/List切り替えが特徴。"
     },
     {
       "id": "07",

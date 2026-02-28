@@ -8,11 +8,11 @@
 | # | Name | URL | Mood | Tags |
 |---|------|-----|------|------|
 | 01 | Locomotive Bold | scroll.locomotive.ca | 大胆で自信に満ちたテクニカル・クリエイティブ | bold, blue-dominant, two-tone |
-| 02 | Topology Precision | topology.vc | 静かな威厳と技術的信頼感が共存するダークVC | dark-theme, minimal, uppercase-nav |
+| 02 | Topology Prism | topology.vc | プリズムの光を帯びた3Dトポロジーが静かな威厳を放つVC | webgl, 3d-art, prism-rainbow |
 | 03 | Antonsson Noir | andreasantonsson.dev | 漆黒の中に浮かぶミニマルなクラフト感 | pure-black, portfolio, serif-display |
 | 04 | Gander Warmth | takeagander.com | 温もりのあるクリーム地にインクのような手触り感 | warm-cream, editorial, custom-serif |
 | 05 | Planetono Carnival | planetono.space | 赤とイエローが弾けるポップ＆コスミック遊園地 | bold-red, playful, space-theme |
-| 06 | Sileent Monochrome | sileent.com | 静寂のなかに潜む洗練された白黒コントラスト | monochrome, ai-studio, pill-buttons |
+| 06 | Sileent Cinema | sileent.com | 映像の力だけで語る、一切の装飾を排したシネマティック・ポートフォリオ | video-portfolio, monochrome, cinema |
 | 07 | Good Fella Craft | good-fella.com | 職人気質のダークトーンにオレンジが差すクラフト系スタジオ | dark-craft, orange-accent, nav-reference |
 | 08 | Foundrline Signal | foundrline.com | スタートアップの緊張感とクリアなシグナルを発するCTA設計 | cta-reference, startup, mono-font |
 
@@ -64,53 +64,60 @@
 
 ---
 
-## Style-02: Topology Precision
+## Style-02: Topology Prism
 
 **URL:** https://www.topology.vc/
-**Mood:** 静かな威厳と技術的信頼感が共存するダークVC
+**Mood:** プリズムの光を帯びた3Dトポロジーが静かな威厳を放つVC
 
 ### トーン（全体の印象）
-- **color_palette:** ダークグレー(#151515)を基調に、ライトグレー(#E4E2D8)のテキスト。ブルーグレー(#A7B4BA)のアクセント
-- **typography:** LazareGrotesk見出し + Space Monoコード感。uppercaseナビ、極小フォントサイズ(10.5px)
-- **spacing:** 大胆な余白。スクロールアニメーションで空間を演出
-- **imagery:** 抽象的なテクスチャと幾何学的パターン
-- **overall_impression:** VC/テックファームの信頼と先端性。声を荒げず、静かに実力を示す
+- **color_palette:** ベースは黒(#0A0A0A) × 白(#FFFFFF)だが、3Dアートのプリズム虹色（ピンク・水色・黄・緑・オレンジ・薄紫）がサイト全体のアイデンティティ。静的カラーとしてはラベンダー(#C8A0FF)系
+- **typography:** カスタムセリフ体（ロゴ・見出し "Meet us at the edge."） + モノスペース（ナビ・フッター・説明テキスト）の2書体対比。uppercaseナビ、極小フォントサイズ(10.5px)、letter-spacing: 1.05px
+- **spacing:** フルスクリーンセクション。スクロールトリガーで3Dアートが変形し空間を創出
+- **imagery:** WebGL 3Dトポロジーアート。同心円リング構造、プリズム断面の虹色が全面に展開。位相幾何学の数学的美しさ
+- **overall_impression:** VCサイトとして異例のアート性。数学×テクノロジーの知性を3Dビジュアルで体現。「フロンティアテックファーム」としてのポジショニングが視覚に直結
 
 ### コンポーネント
-- **header:** 固定ナビ、左ロゴ+右リンク、uppercase・極小サイズ・letter-spacing広め(1.05px)
-- **hero:** フルハイトビューポート、アニメーションテキスト
-- **buttons:** ゴーストボタン、border-radius: 375px（完全ピル型）、1px solid rgba(255,255,255,0.3)
-- **cards/list:** ボーダー区切りのリスト、ホバーでサブテキスト表示
-- **sections:** フルスクリーンアンカーセクション、スクロールスナップ
-- **footer:** ミニマル、テキストリンクのみ
+- **header:** ロゴ左（カスタムセリフ "Topology"）+ ハンバーガー右（丸枠線内に二本線）。背景透過で3Dアートの上に浮く。ナビリンクはuppercase・10.5px・letter-spacing 1.05px
+- **hero:** フルスクリーンWebGL 3Dアート + 大きなセリフ体コピー "Meet us at the edge." + モノスペースのサブテキスト。左下に "TOPOLOGY ©2025"、右下に "EXPLORE ↓"
+- **buttons:** ゴーストボタン、border-radius: 375px（完全ピル型）、1px solid rgba(255,255,255,0.3)。padding: 18px 24px
+- **cards/list:** 脳・ネットワーク・地図の白い線画アイコン3つ並び。テキストセクションはモノスペースで技術説明
+- **sections:** スクロールで3Dアートがズーム・変形。テキストはアートの上にオーバーレイ。黒背景テキストセクションとの交互
+- **footer:** 角丸ボーダーボックス＋四隅に「┌」「┐」「└」「┘」コーナーマーク（独特のディテール）。全uppercase・モノスペース。ナビ + SNSアイコン(Instagram/LinkedIn/X) + "BACK TO TOP ↑"
 
 ### CSS変数（再現用）
 ```css
---color-primary: #151515;
---color-secondary: #E4E2D8;
---color-accent: #A7B4BA;
+--color-primary: #FFFFFF;
+--color-bg: #0A0A0A;
+--color-text: #FFFFFF;
+--color-accent-prism: #C8A0FF;
+--color-border: rgba(255, 255, 255, 0.3);
 --color-mid-gray: #9B9B9B;
---color-dark-gray: #151515;
---color-border: rgba(224, 232, 236, 0.3);
---font-display: 'Space Grotesk', sans-serif;
---font-mono: 'Space Mono', monospace;
---spacing-section: 96px;
+--font-display: 'Instrument Serif', serif; /* or Cormorant Garamond */
+--font-mono: 'Space Mono', monospace; /* or IBM Plex Mono */
+--nav-font-size: 10.5px;
+--nav-letter-spacing: 1.05px;
 --radius-pill: 375px;
+--button-border: 1px solid rgba(255, 255, 255, 0.3);
+--button-padding: 18px 24px;
 --transition-default: 0.3s ease;
 ```
 
 ### 再現のためのデザインルール
-- 背景は#151515の深いダークグレー（ピュアブラックではない）
-- テキストは#E4E2D8の温かみのあるライトグレー
-- ナビはuppercase、10-11pxの極小サイズ、letter-spacing: 1px以上
-- ボタンは完全ピル型（border-radius: 375px）のゴースト
-- ボーダーにはrgba(255,255,255,0.3)の半透明白
-- モノスペースフォント（Space Mono）をアクセントに使用
+1. **webgl_hero:** ヒーローは3Dアートが主役。静的代替はグラデーションメッシュ背景 + プリズム虹色（conic-gradient or mesh gradient）
+2. **serif_plus_mono:** セリフ体（エモーション・見出し）+ モノスペース（情報・UI）の対比で知性と美を両立
+3. **bracket_corners:** ボックスの四隅に「┌┐└┘」のコーナーマーク装飾。CSSの::before/::afterで実装
+4. **uppercase_mono_nav:** ナビゲーション・フッター要素は全uppercase + letter-spacing広め + 極小サイズ
+5. **scroll_transform:** スクロールで3Dアートが変形・ズーム。テキストはアートの上にオーバーレイ表示
+6. **minimal_chrome:** UIは最小限。ハンバーガー（丸枠線＋二本線）+ ロゴ + EXPLORE↓ のみ
+7. **pill_ghost_buttons:** ボタンは完全ピル型（375px）のゴースト。半透明ボーダー
+8. **prism_as_identity:** アクセントカラーはプリズム虹色。単色ではなく、グラデーションで表現
 
 ### 備考
-- LazareGrotesk → Space Grotesk が最も近い代替
-- Space Mono はそのまま Google Fonts で使用可能
-- Magnetikフォントも使用（装飾的なディスプレイ）
+- WebGL/Three.js必須のサイト。Playwrightでは3Dアートがレンダリングされず黒画面になる
+- 静的再現時はCSS mesh gradient + conic-gradient でプリズムの虹色を表現
+- カスタムセリフ体 → Instrument Serif / Cormorant Garamond が代替候補
+- モノスペース → Space Mono / IBM Plex Mono（Google Fonts利用可）
+- フッターの「┌┐└┘」マークはcharacter entity（┌ = U+250C）で実装可能
 
 ---
 
@@ -263,52 +270,77 @@
 
 ---
 
-## Style-06: Sileent Monochrome
+## Style-06: Sileent Cinema ★ 映像ポートフォリオ参考
 
 **URL:** https://www.sileent.com/
-**Mood:** 静寂のなかに潜む洗練された白黒コントラスト
+**Mood:** 映像の力だけで語る、一切の装飾を排したシネマティック・ポートフォリオ
 
 ### トーン（全体の印象）
-- **color_palette:** ホワイト(#FFFFFF)背景 + ブラック(#1A1A1A)テキスト。スレートグレー(#64748B)のサブテキスト
-- **typography:** PP Neue Montreal（ネオグロテスク）一本。ウェイト差で階層を作る
-- **spacing:** コンテナ1rem、グリッドギャップ1.125rem。コンパクトめ
-- **imagery:** AI生成コンテンツのプレビュー
-- **overall_impression:** AI SaaSの典型的クリーンUI。余計な装飾を排除
+- **color_palette:** 純黒(#000000) + 純白(#FFFFFF)のみ。アクセントカラーは一切なし。映像コンテンツもB&Wモノクロームで統一
+- **typography:** PP Neue Montreal 1書体のみ。ウェイト差（300/400/700）とサイズだけで階層を構成。ロゴタイプ "Sileent" は超巨大サイズ
+- **spacing:** フルブリード映像。UIはオーバーレイで最小限に配置
+- **imagery:** フルスクリーンのシネマティックB&W映像が全て。象のクローズアップ、ロボット、戦士の行軍、都市風景、ライブ映像など。プロダクションレベルの映像品質
+- **overall_impression:** 「デザイン」ではなく「映像」で勝負するポートフォリオの最高峰。UIは映像を邪魔しない透明な存在に徹する。クライアント: The Weeknd, Marc Jacob, On, Salmo Ranch
 
 ### コンポーネント
-- **header:** クッキーバナーがファーストビュー。閉じるボタン + ピル型CTA
-- **hero:** テキスト中心、背景ダーク
-- **buttons:** border-radius: 64px（完全ピル）、padding 8px 32px、font-size 10px、font-weight 700。ダーク背景に白テキスト
-- **cards/list:** シンプルなカード、ボーダー区切り
-- **sections:** 白/黒の交互背景
-- **footer:** ミニマル
+
+#### intro
+- 純黒背景に白テキスト中央揃え
+- タグライン: "THE NEXT-GEN AI CONTENT STUDIO FOR HUMAN EMOTION"（uppercase、サンセリフ）
+- 画面下部にロゴタイプ "Sileent" が超巨大サイズで出現
+
+#### header（固定3カラム）
+- **左:** プロジェクト番号 "001" "002" "003"...（スクロールで自動更新）
+- **中央:** "|||| Sileent" ロゴ（縦縞アイコン + ワードマーク）
+- **右:** "Grid" / "List" ビュー切り替えUI
+- 背景透過。映像の上に直接載る
+
+#### bottom_bar（フロストガラス）
+- フロストガラス効果（backdrop-filter: blur）の半透明ピル型バー
+- **左:** "Menu"
+- **右:** 現在のプロジェクト名（スクロールに連動してフェードで入れ替わる）
+- 固定表示。ナビゲーションの中核
+
+#### project_view（List表示）
+- 1プロジェクト = フルスクリーンB&W映像
+- スクロールでプロジェクトが切り替わる
+- プロジェクト: Sileent Showreel 2025, Salmo Ranch, Hannibal: The Nightmare of Rome, The Weeknd, Marc Jacob, Soul Matters
+
+#### grid_view（Grid表示）
+- 2カラムグリッドでプロジェクトのサムネイル映像が並ぶ
+- 各セルもB&W映像
 
 ### CSS変数（再現用）
 ```css
---color-primary: #1A1A1A;
---color-bg: #FFFFFF;
---color-text: #000000;
---color-muted: #64748B;
---font-body: 'DM Sans', sans-serif;
---container-padding: 1rem;
---container-grid-gap: 1.125rem;
---radius-pill: 64px;
---button-padding: 8px 32px;
---button-font-size: 10px;
+--color-bg: #000000;
+--color-text: #FFFFFF;
+--color-text-muted: rgba(255, 255, 255, 0.6);
+--font-body: 'DM Sans', sans-serif; /* or General Sans */
+--glass-blur: blur(20px);
+--glass-bg: rgba(40, 40, 40, 0.6);
+--glass-border-radius: 100px;
+--glass-padding: 12px 24px;
+--project-number-font-size: 14px;
+--logo-font-size: 16px;
+--transition-fade: 0.4s ease;
 ```
 
 ### 再現のためのデザインルール
-- フォントは1ファミリーのみ。ウェイト300/400/700で階層化
-- ボタンはピル型（border-radius: 64px）で統一
-- ボタンのフォントサイズは極小（10px）、uppercase不要
-- 色は白/黒/スレートグレーの3色のみ
-- パディング・ギャップはCSS変数で管理
-- イージングは非常に精緻なlinear()関数を使用（GSAPスタイル）
+1. **video_first:** 映像がすべて。UI・テキストは映像の上に最小限だけ載せる。映像はフルブリード
+2. **pure_monochrome:** 色を一切使わない。黒・白・グレーのみ。映像もB&Wに統一
+3. **frosted_bottom_bar:** ボトム固定のフロストガラスバー（backdrop-filter: blur(20px) + 半透明背景）。ナビゲーションの中核
+4. **numbered_sequence:** プロジェクトに3桁の番号（001, 002...）を振り、左上に常時表示。連番がプロフェッショナル感を演出
+5. **single_typeface:** 1書体（PP Neue Montreal → DM Sans/General Sans）のみ。ウェイトとサイズだけで階層表現
+6. **view_toggle:** Grid/List の切り替えUI。右上に配置。コンテンツの見え方をユーザーが選択できる
+7. **scroll_as_sequence:** スクロール = プロジェクト送り。1スクロール = 1プロジェクト切り替え
+8. **logo_stripe_icon:** ロゴの縦縞 "||||" アイコンはブランドの視覚的アイデンティティ。SVG or Unicode U+2016で再現
 
 ### 備考
-- PP Neue Montreal → DM Sans が最も近い代替
-- アクセス時に500エラーが発生することあり（Nuxt製）
-- イージング関数が非常に詳細（GSAP互換のlinear()定義あり）
+- PP Neue Montreal → DM Sans / General Sans が代替候補
+- Playwright/ヘッドレスブラウザではWebGL映像がレンダリングされずエラー表示になる場合あり
+- フロストガラス: `backdrop-filter: blur(20px); background: rgba(40,40,40,0.6); border-radius: 100px;`
+- 映像がメインのため、静的再現時はダミー映像 or 静止画のB&Wフィルターで代用
+- イージング関数にGSAP互換のlinear()定義を多数使用（非常に精緻）
 
 ---
 
